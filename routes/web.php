@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SampleController;
+use App\Http\Controllers\UserController as UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +17,6 @@ use App\Http\Controllers\SampleController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::POST("users",[SampleController::class,'getData']);
-Route::view("login","users");
+/*Route::POST("users",[SampleController::class,'getData']);
+Route::view("login","users");*/
+Route::get("login",[UserController::class,'getIndex']);
